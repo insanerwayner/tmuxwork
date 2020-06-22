@@ -1,0 +1,6 @@
+#!/bin/bash
+due="$(task +OVERDUE _ids | wc -w)"
+active="$(task +ACTIVE _ids | wc -w)"
+[ "$due" -gt 0 ] && [ "$active" -gt 0 ] && echo "#[bg=colour202] $due #[bg=colour155] $active #[bg=colour214]" && exit
+[ "$due" -gt 0 ] && echo "#[bg=colour202] $due #[bg=colour214]" && exit
+[ "$active" -gt 0 ] && echo "#[bg=colour155] $active #[bg=colour214]" && exit 
