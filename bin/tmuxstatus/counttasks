@@ -1,4 +1,5 @@
 #!/bin/sh
+alias task='task rc.gc=off'
 due="$(task +OVERDUE _ids | wc -w)"
 active="$(task +ACTIVE _ids | wc -w)"
 [ "$active" -eq 1 ] && currenttask=$(task +ACTIVE _ids | task _get $(cat /dev/stdin).description) && active=$(task +ACTIVE _ids)
