@@ -1,4 +1,4 @@
 # tmux plugins
 .tmux
-!.tmux/hooks/
+!.tmux/hooks/*
 *.swp
