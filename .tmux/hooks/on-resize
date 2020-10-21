@@ -18,9 +18,8 @@ function changelayouts()
 	    other="even-vertical"
 	    ;;
     esac
-    for ((i = 0; i < "${#windows[@]}"; i++))
+    for window in ${windows[@]}
     do
-	window="${windows[$i]}"
 	id="$(echo "$window" | cut -f 1 -d ":" )" 
 	name="$(echo "$window" | cut -f 2 -d ":" )"
 	case "$name" in 
@@ -35,7 +34,6 @@ function changelayouts()
 	esac
 	echo "--------"
     done
-#    IFS=$SAVEIFS
     }
 
 [ $width -gt $height ] && changelayouts 1 || changelayouts 2
