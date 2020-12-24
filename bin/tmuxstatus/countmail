@@ -1,4 +1,4 @@
 #!/bin/bash
 # Next line stolen from Luke Smith's mailbox statusbar script but added Junk Email folder
-count="$(find "${XDG_DATA_HOME:-$HOME/.local/share}"/mail/lifepath/[Ii][Nn][Bb][Oo][Xx]*/new/ "${XDG_DATA_HOME:-$HOME/.local/share}"/mail/lifepath/Junk\ Email/new/ -type f | wc -l 2>/dev/null)"
+count="$(find "${XDG_DATA_HOME:-$HOME/.local/share}"/mail/*/[Ii][Nn][Bb][Oo][Xx]*/new/ "${XDG_DATA_HOME:-$HOME/.local/share}"/mail/lifepath/Junk\ Email/new/ -type f | wc -l 2>/dev/null)"
 [ "$count" -gt 0 ] && echo "$count"
