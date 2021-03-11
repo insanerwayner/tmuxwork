@@ -1,0 +1,4 @@
+#!/bin/sh
+
+news=$(newsboat -x print-unread | cut -f 1 -d\ )
+[ "$news" -gt 0 ] && echo " $news " && exit
